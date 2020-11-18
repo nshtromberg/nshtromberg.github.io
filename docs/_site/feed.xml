@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-18T12:24:39-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CIT 480 | Nino Shtromberg | Blog</title><subtitle>This Blog is a part of Senior Design Class for CIT major at CSUN. It will address problems and issues that students run into and hopefully help them achive goals. Weekly blogs will describe tasks that I am working on and give specific instructions for solutions. Welcome!!</subtitle><entry><title type="html">Blog 10 Configuring IAM on AWS!</title><link href="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html" rel="alternate" type="text/html" title="Blog 10 Configuring IAM on AWS!" /><published>2020-11-13T07:44:41-08:00</published><updated>2020-11-13T07:44:41-08:00</updated><id>http://localhost:4000/jekyll/update/2020/11/13/Blog-10</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;h1 id=&quot;setting-up-iam&quot;&gt;&lt;strong&gt;Setting up IAM:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;This week I will be working on setting up an IAM users AWS.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IAM Users and access&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IAM Roles and Permissions&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Federated Users and Permissions&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;IAM Users and access&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Updates more&lt;/p&gt;
+
+&lt;p&gt;AWS account owners can delegate access to specific IAM users who need to view or manage the AWS Billing and Cost Management data for an AWS account. The instructions that follow will help you set up a pretested scenario. This scenario helps you gain hands-on experience configuring billing permissions without concern for affecting your main AWS production account. If you attach a managed policy to your IAM users instead of following this tutorial, you must first activate access to the AWS Billing and Cost Management console.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1: Activate access to billing data on your AWS test account&lt;/strong&gt;
+If you create a single AWS account, only the AWS account owner (AWS account root user) has access to view and manage billing information. IAM users cannot access billing data until the account owner activates IAM access and also attaches policies that provide billing actions to the user or role. To view additional tasks that require you to sign in as the root user, see AWS Tasks that Require Account Root User.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2: Create IAM policies that grant permissions to billing data&lt;/strong&gt;
+After enabling billing access on your account, you must still explicitly grant access to billing data to specific IAM users or groups. You grant this access with a customer managed policy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3: Attach billing policies to your groups&lt;/strong&gt;
+When you attach a policy to a group, all members of that group receive the complete set of access permissions that are associated with that policy. In this scenario, you attach the new billing policies to groups containing only those users who require the billing access.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4: Test access to the billing console&lt;/strong&gt;
+After you’ve completed the core tasks, you’re ready to test the policy. Testing ensures that the policy works the way you want it to.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 9 Set up EC2 AWS!</title><link href="http://localhost:4000/jekyll/update/2020/11/06/Blog-9.html" rel="alternate" type="text/html" title="Blog 9 Set up EC2 AWS!" /><published>2020-11-06T09:27:41-08:00</published><updated>2020-11-06T09:27:41-08:00</updated><id>http://localhost:4000/jekyll/update/2020/11/06/Blog-9</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/11/06/Blog-9.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;h3 id=&quot;set-up-ec2-aws&quot;&gt;&lt;strong&gt;Set up EC2 AWS:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This week I will be working on setting up an EC2 instance for AWS.&lt;/p&gt;
+
+&lt;p&gt;AWS has extensive documentation on how to set up the EC2 instance that are fairly streigh forward.
+Here is a link for a console &lt;a href=&quot;http:// https://console.aws.amazon.com/ec2/&quot; title=&quot;Console&quot;&gt;EC2&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lauch-an-instance&quot;&gt;Lauch an instance&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Choose an Instance Type, choose Next: Configure Instance Details.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;###Configure Instance Details, provide the following information:&lt;/p&gt;
+
+&lt;p&gt;Leave Number of instances at &lt;em&gt;one.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Leave Purchasing option at the &lt;em&gt;default setting&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For Network, choose the entry for the same VPC that you noted when you created your EFS file system in&lt;/p&gt;
+
+&lt;p&gt;###Create Your Amazon EFS File System.&lt;/p&gt;
+
+&lt;p&gt;Subnet choose a* default subnet* in any Availability Zone.&lt;/p&gt;
+
+&lt;p&gt;###Add Storage.&lt;/p&gt;
+
+&lt;p&gt;###Add Tags.&lt;/p&gt;
+
+&lt;p&gt;Name your instance and choose Next: &lt;em&gt;Configure Security Group.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;###Configure Security Group,
+&lt;em&gt;Set Assign a security group to Select an existing security group. Choose the default security group to make sure that it can access your EFS file system.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;###add SSH access:&lt;/p&gt;
+
+&lt;p&gt;Type: &lt;em&gt;SSH&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Protocol: &lt;em&gt;TCP&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Port Range: &lt;em&gt;22&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Source: &lt;em&gt;Anywhere 0.0.0.0/0&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Choose &lt;strong&gt;&lt;em&gt;Review and Launch.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Choose &lt;strong&gt;Launch&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Select the check box for the key pair that you created, and then choose Launch Instances.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is a YouTube video that I found helpful&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/8TlukLu11Yo&quot; title=&quot;Tutorial For Beginners&quot;&gt;Tutorial For Beginners&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 8 set up your Orbi router and satellite!</title><link href="http://localhost:4000/jekyll/update/2020/10/30/Blog-8.html" rel="alternate" type="text/html" title="Blog 8 set up your Orbi router and satellite!" /><published>2020-10-30T10:27:41-07:00</published><updated>2020-10-30T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/10/30/Blog-8</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/10/30/Blog-8.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;h3 id=&quot;to-set-up-your-orbi-router-and-satellite&quot;&gt;&lt;strong&gt;To set up your Orbi router and satellite:&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unplug your modem and remove and replace the backup battery if it uses one.&lt;/li&gt;
+  &lt;li&gt;Plug the modem back in.&lt;/li&gt;
+  &lt;li&gt;Connect your modem to the yellow Internet port on your Orbi router using the included Ethernet cable.&lt;/li&gt;
+  &lt;li&gt;Connect your Orbi router to a power source.&lt;/li&gt;
+  &lt;li&gt;Note: If the Power LED on the back of the Orbi router does not light, press the Power On/Off button.&lt;/li&gt;
+  &lt;li&gt;Wait for the Orbi router’s ring LED to light solid white and then pulse white.&lt;/li&gt;
+  &lt;li&gt;Place the Orbi satellite in the middle of your house to get the best WiFi coverage.&lt;/li&gt;
+  &lt;li&gt;Connect the Orbi satellite to a power source.&lt;/li&gt;
+  &lt;li&gt;Note: If the Power LED on the back of the Orbi satellite does not light, press the Power On/Off button.&lt;/li&gt;
+  &lt;li&gt;Wait for the Orbi satellite’s ring LED to light solid white, then pulse white, and then pulse magenta.&lt;/li&gt;
+  &lt;li&gt;Note: The Orbi satellite’s ring LED might pulse magenta for up to one minute while the satellite attempts to sync with the Orbi router.&lt;/li&gt;
+  &lt;li&gt;After the Orbi satellite’s ring LED pulses magenta, it lights one of the following colors for 10 seconds then turns off:&lt;/li&gt;
+  &lt;li&gt;Solid blue. The connection between the Orbi router and Orbi satellite is good.&lt;/li&gt;
+  &lt;li&gt;Solid magenta. The Orbi satellite cannot connect to the Orbi router. Move the Orbi satellite closer to the Orbi router.&lt;/li&gt;
+  &lt;li&gt;Solid amber. The connection between the Orbi router and Orbi satellite is fair. Consider moving the Orbi satellite closer to the Orbi router.&lt;/li&gt;
+  &lt;li&gt;Note: If the Orbi satellite’s ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.&lt;/li&gt;
+  &lt;li&gt;If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite’s ring LED pulses white, then lights solid blue to indicate a good connection, and then turns off.&lt;/li&gt;
+  &lt;li&gt;Connect your computer or mobile device to the Orbi router or satellite with an Ethernet or WiFi connection.&lt;/li&gt;
+  &lt;li&gt;Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network from your WiFi-enabled computer or mobile device.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download the Orbi app or visit&lt;/p&gt;
+
+    &lt;p&gt;http://orbilogin.com to set up your Orbi WiFi network.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Orbi router’s ring LED turns off after the setup is complete.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 7</title><link href="http://localhost:4000/2020/10/23/Blog-7.html" rel="alternate" type="text/html" title="Blog 7" /><published>2020-10-23T00:00:00-07:00</published><updated>2020-10-23T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/23/Blog-7</id><content type="html" xml:base="http://localhost:4000/2020/10/23/Blog-7.html">&lt;hr /&gt;
+&lt;p&gt;layout: post
+title:  “Blog 7 Jekyll Themes or How to Make Your Blog Pretty”
+date:   2020-10-23 10:27:41 -0700
+categories: jekyll update
+—&lt;/p&gt;
+
+&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll Themes or How to Make Your Blog Pretty&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.github.com&quot; title=&quot;GitHub Website&quot;&gt;GitHub Website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Jekyll Themes&lt;/em&gt; can be easily found on&lt;a href=&quot;http:// GutHub.com&quot; title=&quot; GutHub Website&quot;&gt; GutHub Website&lt;/a&gt; as shared themes.&lt;/p&gt;
+
+&lt;p&gt;Anyone has access to wide range of designed to suit your blog type or your personal design preference.&lt;/p&gt;
+
+&lt;h2 id=&quot;here-are-simple-steps-to-help-a-beginner-choose-and-add-a-theme-to-a-blog&quot;&gt;Here are simple steps to help a beginner choose and add a theme to a blog:&lt;/h2&gt;</content><author><name></name></author><summary type="html">layout: post title: “Blog 7 Jekyll Themes or How to Make Your Blog Pretty” date: 2020-10-23 10:27:41 -0700 categories: jekyll update —</summary></entry><entry><title type="html">Blog 6</title><link href="http://localhost:4000/2020/10/16/Blog-6.html" rel="alternate" type="text/html" title="Blog 6" /><published>2020-10-16T00:00:00-07:00</published><updated>2020-10-16T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/16/Blog-6</id><content type="html" xml:base="http://localhost:4000/2020/10/16/Blog-6.html">&lt;hr /&gt;
+
+&lt;p&gt;layout: post
+title:  “Blog 6 Ancible Playbook”
+date:   2020-10-16 10:27:41 -0700
+categories: jekyll update
+—&lt;/p&gt;
+
+&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;Ancible Play Book Instructions&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installations&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Explained&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Testing&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Play book will consist of tasks that are executed by ansible. Playbook can be viewed as an instruction manual for ansible. It is readable as a text and also executable as a programing language.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;git ini&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Blog 5</title><link href="http://localhost:4000/2020/10/09/Blog-5.html" rel="alternate" type="text/html" title="Blog 5" /><published>2020-10-09T00:00:00-07:00</published><updated>2020-10-09T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/09/Blog-5</id><content type="html" xml:base="http://localhost:4000/2020/10/09/Blog-5.html">&lt;hr /&gt;
+&lt;p&gt;layout: _post&lt;/p&gt;
+
+&lt;p&gt;layout: post
+title:  “Blog 5 Docker”
+date:   2020-10-09 10:27:41 -0700
+categories: jekyll update
+—&lt;/p&gt;
+
+&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;Docker makes package installations possible!&lt;/p&gt;
+
+&lt;p&gt;www.docker.com&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installations&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Explained&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Testing&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the [Amazon Website][AWS.com] for more info&lt;/p&gt;
+
+&lt;p&gt;on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.
+You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;git ini&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: _post</summary></entry><entry><title type="html">Blog 4</title><link href="http://localhost:4000/2020/10/02/Blog-4.html" rel="alternate" type="text/html" title="Blog 4" /><published>2020-10-02T00:00:00-07:00</published><updated>2020-10-02T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/02/Blog-4</id><content type="html" xml:base="http://localhost:4000/2020/10/02/Blog-4.html">&lt;hr /&gt;
+&lt;p&gt;layout: _post&lt;/p&gt;
+
+&lt;p&gt;layout: post
+title:  “Blog 4 DockerFile for beginners”
+date:   2020-10-02 10:27:41 -0700
+categories: jekyll update
+—&lt;/p&gt;
+
+&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;Docker makes package installations possible!&lt;/p&gt;
+
+&lt;p&gt;www.docker.com&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;installations&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Explained&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Docker&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Testing&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the [Amazon Website][AWS.com] for more info&lt;/p&gt;
+
+&lt;p&gt;on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.
+You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: _post</summary></entry><entry><title type="html">Blog 3 Getting Started with AWS</title><link href="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html" rel="alternate" type="text/html" title="Blog 3 Getting Started with AWS" /><published>2020-09-24T10:27:41-07:00</published><updated>2020-09-24T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;AWS offers EDUCATE account for students to have hands on approach!&lt;/p&gt;
+
+&lt;p&gt;Log in to ‘https://aws.amazon.com/’&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;AWS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Management&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Console&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Account&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Settings&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Billing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cost&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Management&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Security&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Credentials&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;AWS&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Personal&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Health&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Dashboard&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sign up for AWS account first&lt;/p&gt;
+
+&lt;p&gt;Check out the [Amazon Website][AWS.com] for more info&lt;/p&gt;
+
+&lt;p&gt;on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.
+You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 1 Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/09/23/Blog-1.html" rel="alternate" type="text/html" title="Blog 1 Welcome to Jekyll!" /><published>2020-09-23T10:27:41-07:00</published><updated>2020-09-23T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/23/Blog-1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/23/Blog-1.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 0 Getting Started with GitHub</title><link href="http://localhost:4000/jekyll/update/2020/09/04/Blog-0.html" rel="alternate" type="text/html" title="Blog 0 Getting Started with GitHub" /><published>2020-09-04T10:27:41-07:00</published><updated>2020-09-04T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/04/Blog-0</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/04/Blog-0.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Getting Started with GitHub&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHub is an excellent way to collaborate with your team while working on a code.
+First step is to register you user name and create a password.
+Open &lt;a href=&quot;http://www.github.com&quot; title=&quot;GitHub Website&quot;&gt;GitHub Website&lt;/a&gt; and create a new account. The account is free and allows users to create multiple blogs.
+&lt;strong&gt;Repository&lt;/strong&gt;is created to keep your projects organized.&lt;/p&gt;
+
+&lt;p&gt;GitHub blogs can be maintained and modified directly by editing the code in your&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_post
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or by editing the code locally and then pushing it to &lt;strong&gt;Github&lt;/strong&gt; with &lt;em&gt;Jekyll&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Blog 0 Updates
+Update 1&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry></feed>

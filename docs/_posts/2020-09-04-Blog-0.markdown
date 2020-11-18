@@ -1,0 +1,25 @@
+---
+layout: "post"
+title:  "Blog 0 Getting Started with GitHub"
+date:   2020-09-04 10:27:41 -0700
+categories: jekyll update
+---
+
+
+####  CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg
+
+***Getting Started with GitHub***
+
+GitHub is an excellent way to collaborate with your team while working on a code.
+First step is to register you user name and create a password.
+Open [GitHub Website](http://www.github.com "GitHub Website") and create a new account. The account is free and allows users to create multiple blogs.
+**Repository**is created to keep your projects organized.
+
+GitHub blogs can be maintained and modified directly by editing the code in your
+
+    _post
+
+or by editing the code locally and then pushing it to **Github** with *Jekyll*.
+
+Blog 0 Updates
+Update 1

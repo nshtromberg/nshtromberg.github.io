@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Blog 9 Set up EC2 AWS!"
+date:   2020-11-06 10:27:41 -0700
+categories: jekyll update
+---
+
+
+####  CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg
+
+
+
+### **Set up EC2 AWS:**
+
+This week I will be working on setting up an EC2 instance for AWS.  
+
+AWS has extensive documentation on how to set up the EC2 instance that are fairly streigh forward.
+Here is a link for a console [EC2](http:// https://console.aws.amazon.com/ec2/ "Console")
+
+### Lauch an instance
+*Choose an Instance Type, choose Next: Configure Instance Details.*
+
+###Configure Instance Details, provide the following information:
+
+Leave Number of instances at *one.*
+
+Leave Purchasing option at the *default setting*.
+
+For Network, choose the entry for the same VPC that you noted when you created your EFS file system in
+
+###Create Your Amazon EFS File System.
+
+Subnet choose a* default subnet* in any Availability Zone.
+
+
+
+###Add Storage.
+
+###Add Tags.
+
+Name your instance and choose Next: *Configure Security Group.*
+
+###Configure Security Group,
+*Set Assign a security group to Select an existing security group. Choose the default security group to make sure that it can access your EFS file system.*
+
+###add SSH access:
+
+Type: *SSH*
+
+Protocol: *TCP*
+
+Port Range: *22*
+
+Source: *Anywhere 0.0.0.0/0*
+
+Choose ***Review and Launch.***
+
+Choose **Launch**
+
+*Select the check box for the key pair that you created, and then choose Launch Instances.*
+
+Below is a YouTube video that I found helpful
+
+[Tutorial For Beginners](https://youtu.be/8TlukLu11Yo "Tutorial For Beginners")

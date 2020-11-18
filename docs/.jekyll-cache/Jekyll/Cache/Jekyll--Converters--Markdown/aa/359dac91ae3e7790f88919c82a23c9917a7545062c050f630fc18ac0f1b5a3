@@ -1,0 +1,33 @@
+I"�
+<h4 id="cit480--fall-2020--github-weekly-blogs--nino-shtromberg">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</h4>
+
+<h3 id="to-set-up-your-orbi-router-and-satellite"><strong>To set up your Orbi router and satellite:</strong></h3>
+
+<ul>
+  <li>Unplug your modem and remove and replace the backup battery if it uses one.</li>
+  <li>Plug the modem back in.</li>
+  <li>Connect your modem to the yellow Internet port on your Orbi router using the included Ethernet cable.</li>
+  <li>Connect your Orbi router to a power source.</li>
+  <li>Note: If the Power LED on the back of the Orbi router does not light, press the Power On/Off button.</li>
+  <li>Wait for the Orbi router’s ring LED to light solid white and then pulse white.</li>
+  <li>Place the Orbi satellite in the middle of your house to get the best WiFi coverage.</li>
+  <li>Connect the Orbi satellite to a power source.</li>
+  <li>Note: If the Power LED on the back of the Orbi satellite does not light, press the Power On/Off button.</li>
+  <li>Wait for the Orbi satellite’s ring LED to light solid white, then pulse white, and then pulse magenta.</li>
+  <li>Note: The Orbi satellite’s ring LED might pulse magenta for up to one minute while the satellite attempts to sync with the Orbi router.</li>
+  <li>After the Orbi satellite’s ring LED pulses magenta, it lights one of the following colors for 10 seconds then turns off:</li>
+  <li>Solid blue. The connection between the Orbi router and Orbi satellite is good.</li>
+  <li>Solid magenta. The Orbi satellite cannot connect to the Orbi router. Move the Orbi satellite closer to the Orbi router.</li>
+  <li>Solid amber. The connection between the Orbi router and Orbi satellite is fair. Consider moving the Orbi satellite closer to the Orbi router.</li>
+  <li>Note: If the Orbi satellite’s ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.</li>
+  <li>If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite’s ring LED pulses white, then lights solid blue to indicate a good connection, and then turns off.</li>
+  <li>Connect your computer or mobile device to the Orbi router or satellite with an Ethernet or WiFi connection.</li>
+  <li>Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network from your WiFi-enabled computer or mobile device.</li>
+  <li>
+    <p>Download the Orbi app or visit</p>
+
+    <p>http://orbilogin.com to set up your Orbi WiFi network.</p>
+  </li>
+  <li>The Orbi router’s ring LED turns off after the setup is complete.</li>
+</ul>
+:ET

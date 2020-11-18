@@ -1,0 +1,53 @@
+I"W<h4 id="cit480--fall-2020--github-weekly-blogs--nino-shtromberg">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</h4>
+
+<h3 id="set-up-ec2-aws"><strong>Set up EC2 AWS:</strong></h3>
+
+<p>This week I will be working on setting up an EC2 instance for AWS.</p>
+
+<p>AWS has extensive documentation on how to set up the EC2 instance that are fairly streigh forward.
+Here is a link for a console <a href="http:// https://console.aws.amazon.com/ec2/" title="Console">EC2</a></p>
+
+<h3 id="lauch-an-instance">Lauch an instance</h3>
+<p><em>Choose an Instance Type, choose Next: Configure Instance Details.</em></p>
+
+<p>###Configure Instance Details, provide the following information:</p>
+
+<p>Leave Number of instances at <em>one.</em></p>
+
+<p>Leave Purchasing option at the <em>default setting</em>.</p>
+
+<p>For Network, choose the entry for the same VPC that you noted when you created your EFS file system in</p>
+
+<p>###Create Your Amazon EFS File System.</p>
+
+<p>Subnet choose a* default subnet* in any Availability Zone.</p>
+
+<p>###Add Storage.</p>
+
+<p>###Add Tags.</p>
+
+<p>Name your instance and choose Next: <em>Configure Security Group.</em></p>
+
+<p>###Configure Security Group,
+<em>Set Assign a security group to Select an existing security group. Choose the default security group to make sure that it can access your EFS file system.</em></p>
+
+<p>###add SSH access:</p>
+
+<p>Type: <em>SSH</em></p>
+
+<p>Protocol: <em>TCP</em></p>
+
+<p>Port Range: <em>22</em></p>
+
+<p>Source: <em>Anywhere 0.0.0.0/0</em></p>
+
+<p>Choose <strong><em>Review and Launch.</em></strong></p>
+
+<p>Choose <strong>Launch</strong></p>
+
+<p><em>Select the check box for the key pair that you created, and then choose Launch Instances.</em></p>
+
+<p>Below is a YouTube video that I found helpful</p>
+
+<p><a href="https://youtu.be/8TlukLu11Yo" title="Tutorial For Beginners">Tutorial For Beginners</a></p>
+:ET
