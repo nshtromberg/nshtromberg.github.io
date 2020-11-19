@@ -1,0 +1,8 @@
+---
+3.0.0 jekyll:~> 3.6,jekyll-data:~> 1.0,jekyll-feed:~> 0.9.2,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.1,jemoji:~> 0.8|checksum:0faecd7addebb3b362665f2f550cdac3dfa663331a712f00d2a224d78aec0421
+3.0.1 jekyll:~> 3.6,jekyll-data:~> 1.0,jekyll-feed:~> 0.9.2,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.1,jemoji:~> 0.8|checksum:a557df1472e7bce97b79a932e0353ed50caab6bdc151ae7caa6615163e3bab12
+3.1.0 jekyll:~> 3.6,jekyll-data:~> 1.0,jekyll-feed:~> 0.9.2,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.1,jemoji:~> 0.8|checksum:616dc031f3bb4f6616d6543371f6d4c79a2bef1cfa5e41c51eff959a67f61a97
+3.1.1 jekyll:~> 3.6,jekyll-data:~> 1.0,jekyll-feed:~> 0.9.2,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.1,jemoji:~> 0.8|checksum:7fda5b1652ddaca4171366983ef6b35ed8c70b36997b486ea9b37d8310a4298d
+3.1.2 jekyll:~> 3.6,jekyll-data:~> 1.0,jekyll-feed:~> 0.9.2,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.1,jemoji:~> 0.8|checksum:f182c9323d09e87df346896c2dd2d2b1c0da8d8d80cfdbf8a0fdd34d728daaba
+3.1.3 jekyll:< 5.0&>= 3.6,jekyll-feed:~> 0.1,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.3|checksum:ed88062214b8cd6c5e0f571e6b9f829260941b394191d0f8cbd2e78532903774
+3.2.0 jekyll:< 5.0&>= 3.6,jekyll-feed:~> 0.1,jekyll-gist:~> 1.4,jekyll-paginate:~> 1.1,jekyll-seo-tag:~> 2.4,jekyll-sitemap:~> 1.3|checksum:7b19157e9fea6398f3675fb32b6cd23fa149892d15e8d9d69586b9ac1da605c9

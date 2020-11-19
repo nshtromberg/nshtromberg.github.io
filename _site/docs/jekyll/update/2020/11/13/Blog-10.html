@@ -1,0 +1,28 @@
+<h4 id="cit480--fall-2020--github-weekly-blogs--nino-shtromberg">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</h4>
+
+<h1 id="setting-up-iam"><strong>Setting up IAM:</strong></h1>
+
+<p>This week I will be working on setting up an IAM users AWS.</p>
+<ul>
+  <li><strong>IAM Users and access</strong></li>
+  <li><strong>IAM Roles and Permissions</strong></li>
+  <li><strong>Federated Users and Permissions</strong></li>
+</ul>
+
+<p><strong><em>IAM Users and access</em></strong></p>
+
+<p>Updates more</p>
+
+<p>AWS account owners can delegate access to specific IAM users who need to view or manage the AWS Billing and Cost Management data for an AWS account. The instructions that follow will help you set up a pretested scenario. This scenario helps you gain hands-on experience configuring billing permissions without concern for affecting your main AWS production account. If you attach a managed policy to your IAM users instead of following this tutorial, you must first activate access to the AWS Billing and Cost Management console.</p>
+
+<p><strong>Step 1: Activate access to billing data on your AWS test account</strong>
+If you create a single AWS account, only the AWS account owner (AWS account root user) has access to view and manage billing information. IAM users cannot access billing data until the account owner activates IAM access and also attaches policies that provide billing actions to the user or role. To view additional tasks that require you to sign in as the root user, see AWS Tasks that Require Account Root User.</p>
+
+<p><strong>Step 2: Create IAM policies that grant permissions to billing data</strong>
+After enabling billing access on your account, you must still explicitly grant access to billing data to specific IAM users or groups. You grant this access with a customer managed policy.</p>
+
+<p><strong>Step 3: Attach billing policies to your groups</strong>
+When you attach a policy to a group, all members of that group receive the complete set of access permissions that are associated with that policy. In this scenario, you attach the new billing policies to groups containing only those users who require the billing access.</p>
+
+<p><strong>Step 4: Test access to the billing console</strong>
+After you’ve completed the core tasks, you’re ready to test the policy. Testing ensures that the policy works the way you want it to.</p>
