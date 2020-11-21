@@ -1,0 +1,63 @@
+---
+layout: "post"
+title:  "Blog 11 Getting Started on Terraform!"
+date:   2020-11-20 08:44:41 -0700
+categories: jekyll update
+---
+
+
+####  CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg
+
+#  **Setting up IAM:**
+
+This week I will be working on Terraform Lab for the class.
+
+Here are some of the items I am looking into before getting started:
+
+- **Installation Process**
+- **Deploying a Server**
+
+
+------------
+
+
+***Installation Process***
+
+Terraform has to be installed on a custom-controlled machine. Look for the latest version on Terraform [website](https://www.terraform.io/downloads.html "website")
+
+
+**Step 1: Installing Zip with command and unzip to download**
+
+    sudo apt-get install zip -y
+
+    unzip terraform*.zip
+
+**Step 2:Test the installation**
+
+    terraform version
+
+
+
+------------
+
+
+***Deploying a Server and initialising Terraform***
+
+    mkdir ~/terraform
+
+    cd ~/terraform
+
+    nano config.tf
+
+Paste the code below into config file
+    # main.tf
+    provider "kubernetes" {}
+
+Initialize by executing the command
+
+    terraform init
+
+and apply changes
+
+    terraform apply
+------------

@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-18T16:50:24-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CIT 480 | Nino Shtromberg | Blog</title><subtitle>This Blog is a part of Senior Design Class for CIT major at CSUN. It will address problems and issues that students run into and hopefully help them achive goals. Weekly blogs will describe tasks that I am working on and give specific instructions for solutions. Welcome!!</subtitle><entry><title type="html">Blog 10 Configuring IAM on AWS!</title><link href="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html" rel="alternate" type="text/html" title="Blog 10 Configuring IAM on AWS!" /><published>2020-11-13T07:44:41-08:00</published><updated>2020-11-13T07:44:41-08:00</updated><id>http://localhost:4000/jekyll/update/2020/11/13/Blog-10</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-20T20:03:31-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CIT 480 | Nino Shtromberg | Blog</title><subtitle>This Blog is a part of Senior Design Class for CIT major at CSUN. It will address problems and issues that students run into and hopefully help them achive goals. Weekly blogs will describe tasks that I am working on and give specific instructions for solutions. Welcome!!</subtitle><entry><title type="html">Blog 11 Getting Started on Terraform!</title><link href="http://localhost:4000/jekyll/update/2020/11/20/Blog-11.html" rel="alternate" type="text/html" title="Blog 11 Getting Started on Terraform!" /><published>2020-11-20T07:44:41-08:00</published><updated>2020-11-20T07:44:41-08:00</updated><id>http://localhost:4000/jekyll/update/2020/11/20/Blog-11</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/11/20/Blog-11.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+
+&lt;h1 id=&quot;setting-up-iam&quot;&gt;&lt;strong&gt;Setting up IAM:&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;This week I will be working on Terraform Lab for the class.&lt;/p&gt;
+
+&lt;p&gt;Here are some of the items I am looking into before getting started:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Installation Process&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Deploying a Server&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Installation Process&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Terraform has to be installed on a custom-controlled machine. Look for the latest version on Terraform &lt;a href=&quot;https://www.terraform.io/downloads.html&quot; title=&quot;website&quot;&gt;website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1: Installing Zip with command and unzip to download&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install zip -y
+
+unzip terraform*.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2:Test the installation&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;terraform version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Deploying a Server and initialising Terraform&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ~/terraform
+
+cd ~/terraform
+
+nano config.tf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Paste the code below into config file
+    # main.tf
+    provider “kubernetes” {}&lt;/p&gt;
+
+&lt;p&gt;Initialize by executing the command&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;terraform init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and apply changes&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;terraform apply ------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 10 Configuring IAM on AWS!</title><link href="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html" rel="alternate" type="text/html" title="Blog 10 Configuring IAM on AWS!" /><published>2020-11-13T07:44:41-08:00</published><updated>2020-11-13T07:44:41-08:00</updated><id>http://localhost:4000/jekyll/update/2020/11/13/Blog-10</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/11/13/Blog-10.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
 
 &lt;h1 id=&quot;setting-up-iam&quot;&gt;&lt;strong&gt;Setting up IAM:&lt;/strong&gt;&lt;/h1&gt;
 
@@ -96,10 +150,13 @@ Here is a link for a console &lt;a href=&quot;http:// https://console.aws.amazon
   &lt;li&gt;Solid blue. The connection between the Orbi router and Orbi satellite is good.&lt;/li&gt;
   &lt;li&gt;Solid magenta. The Orbi satellite cannot connect to the Orbi router. Move the Orbi satellite closer to the Orbi router.&lt;/li&gt;
   &lt;li&gt;Solid amber. The connection between the Orbi router and Orbi satellite is fair. Consider moving the Orbi satellite closer to the Orbi router.&lt;/li&gt;
-  &lt;li&gt;Note: If the Orbi satellite’s ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.&lt;/li&gt;
-  &lt;li&gt;If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite’s ring LED pulses white, then lights solid blue to indicate a good connection, and then turns off.&lt;/li&gt;
+  &lt;li&gt;Note: If the Orbi satellite’s ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the
+Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.&lt;/li&gt;
+  &lt;li&gt;If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite’s ring LED pulses white, then lights solid blue to indicate a good connection,
+and then turns off.&lt;/li&gt;
   &lt;li&gt;Connect your computer or mobile device to the Orbi router or satellite with an Ethernet or WiFi connection.&lt;/li&gt;
-  &lt;li&gt;Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network from your WiFi-enabled computer or mobile device.&lt;/li&gt;
+  &lt;li&gt;Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network
+ from your WiFi-enabled computer or mobile device.&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Download the Orbi app or visit&lt;/p&gt;
 
@@ -150,7 +207,6 @@ categories: jekyll update
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;git ini&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Blog 5</title><link href="http://localhost:4000/2020/10/09/Blog-5.html" rel="alternate" type="text/html" title="Blog 5" /><published>2020-10-09T00:00:00-07:00</published><updated>2020-10-09T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/09/Blog-5</id><content type="html" xml:base="http://localhost:4000/2020/10/09/Blog-5.html">&lt;hr /&gt;
-&lt;p&gt;layout: _post&lt;/p&gt;
 
 &lt;p&gt;layout: post
 title:  “Blog 5 Docker”
@@ -189,8 +245,7 @@ You’ll find this post in your &lt;code class=&quot;language-plaintext highligh
 
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;git ini&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: _post</summary></entry><entry><title type="html">Blog 4</title><link href="http://localhost:4000/2020/10/02/Blog-4.html" rel="alternate" type="text/html" title="Blog 4" /><published>2020-10-02T00:00:00-07:00</published><updated>2020-10-02T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/02/Blog-4</id><content type="html" xml:base="http://localhost:4000/2020/10/02/Blog-4.html">&lt;hr /&gt;
-&lt;p&gt;layout: _post&lt;/p&gt;
+&lt;p&gt;git ini&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Blog 4</title><link href="http://localhost:4000/2020/10/02/Blog-4.html" rel="alternate" type="text/html" title="Blog 4" /><published>2020-10-02T00:00:00-07:00</published><updated>2020-10-02T00:00:00-07:00</updated><id>http://localhost:4000/2020/10/02/Blog-4</id><content type="html" xml:base="http://localhost:4000/2020/10/02/Blog-4.html">&lt;hr /&gt;
 
 &lt;p&gt;layout: post
 title:  “Blog 4 DockerFile for beginners”
@@ -227,7 +282,7 @@ You’ll find this post in your &lt;code class=&quot;language-plaintext highligh
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: _post</summary></entry><entry><title type="html">Blog 3 Getting Started with AWS</title><link href="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html" rel="alternate" type="text/html" title="Blog 3 Getting Started with AWS" /><published>2020-09-24T10:27:41-07:00</published><updated>2020-09-24T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Blog 3 Getting Started with AWS</title><link href="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html" rel="alternate" type="text/html" title="Blog 3 Getting Started with AWS" /><published>2020-09-24T10:27:41-07:00</published><updated>2020-09-24T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/24/Blog-3-AWS-Registration.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
 
 &lt;p&gt;AWS offers EDUCATE account for students to have hands on approach!&lt;/p&gt;
 
@@ -262,13 +317,19 @@ You’ll find this post in your &lt;code class=&quot;language-plaintext highligh
 
 &lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 1 Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/09/23/Blog-1.html" rel="alternate" type="text/html" title="Blog 1 Welcome to Jekyll!" /><published>2020-09-23T10:27:41-07:00</published><updated>2020-09-23T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/23/Blog-1</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/23/Blog-1.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
 
-&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and
+re-build the site to see your changes. You can rebuild the site in many different
+ ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web
+ server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit
+numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the
+file. After that, include the necessary front matter. Take a look at the source
+ for this post to get an idea about how it works.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
@@ -278,21 +339,6 @@ You’ll find this post in your &lt;code class=&quot;language-plaintext highligh
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry><entry><title type="html">Blog 0 Getting Started with GitHub</title><link href="http://localhost:4000/jekyll/update/2020/09/04/Blog-0.html" rel="alternate" type="text/html" title="Blog 0 Getting Started with GitHub" /><published>2020-09-04T10:27:41-07:00</published><updated>2020-09-04T10:27:41-07:00</updated><id>http://localhost:4000/jekyll/update/2020/09/04/Blog-0</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/09/04/Blog-0.html">&lt;h4 id=&quot;cit480--fall-2020--github-weekly-blogs--nino-shtromberg&quot;&gt;CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Getting Started with GitHub&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;GitHub is an excellent way to collaborate with your team while working on a code.
-First step is to register you user name and create a password.
-Open &lt;a href=&quot;http://www.github.com&quot; title=&quot;GitHub Website&quot;&gt;GitHub Website&lt;/a&gt; and create a new account. The account is free and allows users to create multiple blogs.
-&lt;strong&gt;Repository&lt;/strong&gt;is created to keep your projects organized.&lt;/p&gt;
-
-&lt;p&gt;GitHub blogs can be maintained and modified directly by editing the code in your&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_post
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or by editing the code locally and then pushing it to &lt;strong&gt;Github&lt;/strong&gt; with &lt;em&gt;Jekyll&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Blog 0 Updates
-Update 1&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the
+ most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.
+  If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</summary></entry></feed>

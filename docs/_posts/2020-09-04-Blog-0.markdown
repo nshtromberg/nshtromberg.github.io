@@ -12,7 +12,8 @@ categories: jekyll update
 
 GitHub is an excellent way to collaborate with your team while working on a code.
 First step is to register you user name and create a password.
-Open [GitHub Website](http://www.github.com "GitHub Website") and create a new account. The account is free and allows users to create multiple blogs.
+Open [GitHub Website](http://www.github.com "GitHub Website") and create a new account.
+The account is free and allows users to create multiple blogs.
 **Repository**is created to keep your projects organized.
 
 GitHub blogs can be maintained and modified directly by editing the code in your

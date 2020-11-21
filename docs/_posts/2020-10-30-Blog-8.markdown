@@ -27,10 +27,13 @@ categories: jekyll update
 - Solid blue. The connection between the Orbi router and Orbi satellite is good.
 - Solid magenta. The Orbi satellite cannot connect to the Orbi router. Move the Orbi satellite closer to the Orbi router.
 - Solid amber. The connection between the Orbi router and Orbi satellite is fair. Consider moving the Orbi satellite closer to the Orbi router.
-- Note: If the Orbi satellite's ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.
-- If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite's ring LED pulses white, then lights solid blue to indicate a good connection, and then turns off.
+- Note: If the Orbi satellite's ring LED is still pulsing magenta after about one minute, and you already moved the Orbi satellite closer to the
+Orbi router, press the Sync button on the Orbi router and on the Orbi satellite.
+- If the Orbi satellite successfully syncs with the Orbi router, the Orbi satellite's ring LED pulses white, then lights solid blue to indicate a good connection,
+and then turns off.
 - Connect your computer or mobile device to the Orbi router or satellite with an Ethernet or WiFi connection.
-- Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network from your WiFi-enabled computer or mobile device.
+- Note: To connect with WiFi, find the preset WiFi network name (SSID) and password on the label on the Orbi router or satellite and connect to that network
+ from your WiFi-enabled computer or mobile device.
 - Download the Orbi app or visit
 
     http://orbilogin.com to set up your Orbi WiFi network.

@@ -1,6 +1,4 @@
 ---
-layout: _post
-
 layout: post
 title:  "Blog 3 Getting Started with AWS"
 date:   2020-09-24 10:27:41 -0700

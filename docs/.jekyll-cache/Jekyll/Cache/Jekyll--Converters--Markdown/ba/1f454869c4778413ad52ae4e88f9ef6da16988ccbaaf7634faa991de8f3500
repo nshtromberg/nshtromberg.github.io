@@ -1,0 +1,20 @@
+I"³<h4 id="cit480--fall-2020--github-weekly-blogs--nino-shtromberg">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</h4>
+
+<p><strong><em>Getting Started with GitHub</em></strong></p>
+
+<p>GitHub is an excellent way to collaborate with your team while working on a code.
+First step is to register you user name and create a password.
+Open <a href="http://www.github.com" title="GitHub Website">GitHub Website</a> and create a new account.
+The account is free and allows users to create multiple blogs.
+<strong>Repository</strong>is created to keep your projects organized.</p>
+
+<p>GitHub blogs can be maintained and modified directly by editing the code in your</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_post
+</code></pre></div></div>
+
+<p>or by editing the code locally and then pushing it to <strong>Github</strong> with <em>Jekyll</em>.</p>
+
+<p>Blog 0 Updates
+Update 1</p>
+:ET

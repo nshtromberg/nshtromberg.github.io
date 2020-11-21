@@ -1,0 +1,56 @@
+I"d<h4 id="cit480--fall-2020--github-weekly-blogs--nino-shtromberg">CIT480 | Fall 2020 | GitHub Weekly Blogs | Nino Shtromberg</h4>
+
+<h1 id="setting-up-iam"><strong>Setting up IAM:</strong></h1>
+
+<p>This week I will be working on Terraform Lab for the class.</p>
+
+<p>Here are some of the items I am looking into before getting started:</p>
+
+<ul>
+  <li><strong>Installation Process</strong></li>
+  <li><strong>Deploying a Server</strong></li>
+</ul>
+
+<hr />
+
+<p><strong><em>Installation Process</em></strong></p>
+
+<p>Terraform has to be installed on a custom-controlled machine. Look for the latest version on Terraform <a href="https://www.terraform.io/downloads.html" title="website">website</a></p>
+
+<p><strong>Step 1: Installing Zip with command and unzip to download</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install zip -y
+
+unzip terraform*.zip
+</code></pre></div></div>
+
+<p><strong>Step 2:Test the installation</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform version
+</code></pre></div></div>
+
+<hr />
+
+<p><strong><em>Deploying a Server and initialising Terraform</em></strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/terraform
+
+cd ~/terraform
+
+nano config.tf
+</code></pre></div></div>
+
+<p>Paste the code below into config file
+    # main.tf
+    provider “kubernetes” {}</p>
+
+<p>Initialize by executing the command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+</code></pre></div></div>
+
+<p>and apply changes</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform apply ------------
+</code></pre></div></div>
+:ET

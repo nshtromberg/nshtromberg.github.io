@@ -1,6 +1,5 @@
 
 ---
-layout: _post
 
 layout: post
 title:  "Blog 5 Docker"
